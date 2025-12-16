@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>استبيان الخدمات الرقمية</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+<style>
+body{
+    margin:0;
+    font-family:'Cairo', sans-serif;
+    background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    color:#fff;
+}
+.container{
+    max-width:900px;
+    margin:40px auto;
+    background:rgba(0,0,0,.8);
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 25px 50px rgba(0,0,0,.6);
+}
+h1{
+    text-align:center;
+    color:#00eaff;
+}
+.section{
+    margin-top:35px;
+}
+.section h2{
+    border-bottom:2px solid #00eaff;
+    padding-bottom:8px;
+}
+.question{
+    margin-top:20px;
+}
+.options{
+    margin-top:10px;
+}
+.options label{
+    margin-right:15px;
+}
+input[type="number"], input[type="text"], select{
+    width:100%;
+    padding:10px;
+    margin-top:8px;
+    border-radius:10px;
+    border:none;
+}
+button{
+    margin-top:40px;
+    width:100%;
+    padding:16px;
+    font-size:18px;
+    border:none;
+    border-radius:15px;
+    background:#00eaff;
+    color:#000;
+    cursor:pointer;
+}
+button:hover{
+    background:#00bcd4;
+}
+.note{
+    margin-top:20px;
+    font-size:14px;
+    color:#bbb;
+    text-align:center;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+<h1>📊 استبيان الخدمات الرقمية</h1>
+
+<form action="FORM_URL" method="POST">
+
+<div class="section">
+<h2>1️⃣ هل تواجه هذا النوع من الحاجيات؟</h2>
+
+<div class="question">
+<p>CV احترافي أو تحسين LinkedIn</p>
+<div class="options">
+<label><input type="radio" name="CV_LinkedIn_Need" value="Oui"> Oui</label>
+<label><input type="radio" name="CV_LinkedIn_Need" value="Non"> Non</label>
+</div>
+</div>
+
+<div class="question">
+<p>فيديو قصير بدون تصوير</p>
+<div class="options">
+<label><input type="radio" name="Video_Need" value="Oui"> Oui</label>
+<label><input type="radio" name="Video_Need" value="Non"> Non</label>
+</div>
+</div>
+
+<div class="question">
+<p>طباعة مخصصة (T-shirt, Mug...)</p>
+<div class="options">
+<label><input type="radio" name="Print_Need" value="Oui"> Oui</label>
+<label><input type="radio" name="Print_Need" value="Non"> Non</label>
+</div>
+</div>
+
+<div class="question">
+<p>إنشاء موقع ويب</p>
+<div class="options">
+<label><input type="radio" name="Website_Need" value="Oui"> Oui</label>
+<label><input type="radio" name="Website_Need" value="Non"> Non</label>
+</div>
+</div>
+</div>
+
+<div class="section">
+<h2>2️⃣ مدى أهمية الخدمات (%)</h2>
+<input type="number" name="Importance_CV" placeholder="CV & LinkedIn %">
+<input type="number" name="Importance_Video" placeholder="Montage vidéo %">
+<input type="number" name="Importance_Print" placeholder="Impression personnalisée %">
+<input type="number" name="Importance_Web" placeholder="Site web %">
+</div>
+
+<div class="section">
+<h2>3️⃣ الاستعداد للدفع</h2>
+
+<p>الخدمات الرقمية</p>
+<label><input type="radio" name="Pay_Digital" value="Oui"> Oui</label>
+<label><input type="radio" name="Pay_Digital" value="Non"> Non</label>
+
+<p>الطباعة المخصصة</p>
+<label><input type="radio" name="Pay_Print" value="Oui"> Oui</label>
+<label><input type="radio" name="Pay_Print" value="Non"> Non</label>
+
+<p>Budget</p>
+<select name="Budget">
+<option>أقل من 100 DH</option>
+<option>100 – 300 DH</option>
+<option>300 – 600 DH</option>
+<option>أكثر من 600 DH</option>
+</select>
+</div>
+
+<div class="section">
+<h2>4️⃣ طريقة التوصل بالخدمة</h2>
+<label><input type="checkbox" name="Delivery" value="Online"> Online</label>
+<label><input type="checkbox" name="Delivery" value="حضوري"> حضوري</label>
+<label><input type="checkbox" name="Delivery" value="بجوج"> بجوج</label>
+</div>
+
+<div class="section">
+<h2>5️⃣ نجاح المشروع</h2>
+<label><input type="radio" name="Project_Success" value="Oui"> Oui</label>
+<label><input type="radio" name="Project_Success" value="Non"> Non</label>
+<input type="number" name="Project_Percentage" placeholder="Percentage %">
+</div>
+
+<div class="section">
+<h2>6️⃣ أكثر خدمة مطلوبة</h2>
+<label><input type="checkbox" name="Top_Service" value="CV & LinkedIn"> CV & LinkedIn</label><br>
+<label><input type="checkbox" name="Top_Service" value="Montage vidéo"> Montage vidéo</label><br>
+<label><input type="checkbox" name="Top_Service" value="Impression personnalisée"> Impression personnalisée</label><br>
+<label><input type="checkbox" name="Top_Service" value="Création sites web"> Création de sites web</label><br>
+<input type="text" name="Other_Service" placeholder="أخرى">
+</div>
+
+<div class="section">
+<h2>7️⃣ زبون مستقبلي</h2>
+<label><input type="radio" name="Future_Client" value="Oui"> Oui</label>
+<label><input type="radio" name="Future_Client" value="Non"> Non</label>
+<input type="number" name="Future_Percentage" placeholder="Percentage %">
+</div>
+
+<input type="hidden" name="_subject" value="📊 إجابة جديدة من استبيان الخدمات">
+
+<button type="submit">📩 إرسال الاستبيان</button>
+
+</form>
+
+<p class="note">جميع الإجابات سرية وتستعمل لأغراض إحصائية فقط</p>
+
+</div>
+
+</body>
+</html>
